@@ -1,0 +1,7 @@
+---
+# handlers file for roles/apache-deploymaent-role
+
+- name: Restart Httpd
+  service:
+     name: httpd
+     state: restarted

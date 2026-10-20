@@ -1,0 +1,23 @@
+---
+# tasks file for roles/apache-deploymaent-role
+- name: install apache
+  dnf:
+    name: httpd
+    state: present
+
+- name: configre the file
+  template: 
+    src: apache.conf.j2
+    dest: /etc/httpd/conf.d/myweeeeb.conf
+    mode: '0644'
+    owner: root
+    group: root
+  notify: Restart Httpd
+
+- name: enable httpd service   
+  service:
+    name: httpd
+    state: started
+    enabled: true
+
+

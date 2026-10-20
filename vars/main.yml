@@ -1,0 +1,9 @@
+---
+# vars file for roles/apache-deploymaent-role
+
+apache_doc_root: /var/www/html
+apache_server_name: mywebsite.local
+allowed_IPS:
+  - 172.20.10.6
+  - 172.20.10.7
+  - 172.20.10.8
