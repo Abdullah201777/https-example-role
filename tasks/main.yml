@@ -12,7 +12,7 @@
     mode: '0644'
     owner: root
     group: root
-  notify: Restart Httpd
+  notify: Restart Http
 
 - name: enable httpd service   
   service:
